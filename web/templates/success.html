@@ -1,0 +1,28 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>success</title>
+	</head>
+	<body align="center">
+		<br>
+		<br>
+		<br>
+		<br>
+		<h3>用户信息输入正确，成功登入系统</h3>
+		<hr>
+		<table border="1" align="center">
+			<tr>
+				<td>用户名</td>
+				<td>密码</td>
+			</tr>
+			{% for tabel in tabels %}
+                <tr>
+                    <td>{{tabel.split(':')[0] | trim}}</td>
+    				<td>{{tabel.split(':')[1] | trim}}</td>
+                </tr>
+			{% endfor %}
+		</table>
+	</body>
+
+</html>
